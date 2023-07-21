@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControls.CollectionControls"
+             Title="CollectionControls">
+    <!--<VerticalStackLayout>
+
+        <CarouselView IndicatorView="indicatorView">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+
+                        --><!-- A template that our items will possess--><!--
+                        <Frame Margin="20"
+                           BorderColor="DarkGray"
+                           CornerRadius="5"
+                           HasShadow="True"
+                           HeightRequest="120"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand">
+
+                            <Label Text="{Binding .}"/>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+
+            --><!--The items in the carousel --><!--
+            <CarouselView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>First Element</x:String>
+                    <x:String>Second Element</x:String>
+                    <x:String>Third Element</x:String>
+                    <x:String>Fourth Element</x:String>
+                    <x:String>Fifth Element</x:String>
+                    <x:String>SixthElement</x:String>
+                    <x:String>Seventh Element</x:String>
+                    <x:String>Eight Element</x:String>
+                    <x:String>Ninth Element</x:String>
+                    <x:String>Tenth Element</x:String>
+                </x:Array>
+            </CarouselView.ItemsSource>
+        </CarouselView>
+
+        --><!-- A control to help us indicate which element in the heirarchy of a carousel we are viewing--><!--
+
+        <IndicatorView x:Name="indicatorView"
+                       HorizontalOptions="Center"
+                       IndicatorColor="LightGray"
+                       SelectedIndicatorColor="Gray"/>
+
+    </VerticalStackLayout>-->
+
+    <!--A LIST VIEW COVERS THE WHOLE PAGE SO WE WON'T USE THE VERTICALSTACKLAYOUT -->
+
+    <!--<ListView BackgroundColor="Cyan" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+
+                    --><!-- A template that our items will possess--><!--
+                    <StackLayout>
+                        <Frame Margin="20"
+                           BorderColor="DarkGray"
+                           CornerRadius="5"
+                           HasShadow="True"
+                           HeightRequest="40"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand">
+
+                            <Label Text="{Binding .}"/>
+                        </Frame>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+        --><!--The items in the ListView --><!--
+        <ListView.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>First Element</x:String>
+                <x:String>Second Element</x:String>
+                <x:String>Third Element</x:String>
+                <x:String>Fourth Element</x:String>
+                <x:String>Fifth Element</x:String>
+                <x:String>SixthElement</x:String>
+                <x:String>Seventh Element</x:String>
+                <x:String>Eight Element</x:String>
+                <x:String>Ninth Element</x:String>
+                <x:String>Tenth Element</x:String>
+            </x:Array>
+        </ListView.ItemsSource>
+    
+    </ListView>-->
+
+    <!--A COLLECTIONVIEW COVERS THE WHOLE PAGE SO WE WON'T USE THE VERTICALSTACKLAYOUT -->
+
+    <!--<CollectionView SelectionMode="Single">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout>
+                    <Frame Margin="20"
+                           BorderColor="Gray"
+                           CornerRadius="5"
+                           HasShadow="True"
+                           HeightRequest="40"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand">
+
+                        <Label Text="{Binding .}" 
+                               TextColor="Gray"/>
+                    </Frame>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+
+        <CollectionView.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>First View</x:String>
+                <x:String>Second View</x:String>
+                <x:String>Third View</x:String>
+            </x:Array>
+            
+             My texts are not displaying, and I don't know why 
+        </CollectionView.ItemsSource>
+    </CollectionView>-->
+
+    
+    
+    <!--<StackLayout>
+        <Picker VerticalOptions="Center">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>First View</x:String>
+                    <x:String>Second View</x:String>
+                    <x:String>Third View</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+    
+    
+    </StackLayout>-->
+
+
+    <TableView Intent="Settings">
+        <TableRoot>
+
+            <TableSection Title="Profile" >
+                <ImageCell Detail="Change icon"
+                           Text="Profile Icon"
+                           ImageSource="dotnet_bot.svg"
+                           Height="60"/>
+                <TextCell Text="Child of The Holy Spirit"
+                          Detail="Profile One Liner"/>
+            </TableSection>
+            
+            <TableSection Title="Appearance">
+                <SwitchCell Text="Dark Theme"/>
+                <SwitchCell Text="Small Text"/>
+                <SwitchCell Text="Gradient Colors"/>
+            </TableSection>
+
+            <TableSection Title="Fonts">
+                <EntryCell Label="Font" Text="Gabriola"/>
+                <EntryCell Label="Font Weight" Text="Light"/>
+            </TableSection>
+            
+        </TableRoot>
+    </TableView>
+</ContentPage>

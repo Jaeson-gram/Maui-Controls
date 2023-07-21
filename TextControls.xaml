@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControls.TextControls"
+             Title="TextControls">
+    <VerticalStackLayout>
+        <!-- Controls that allow us to add and edit text -->
+
+        <Entry x:Name="EntryCtrltxt"
+               Placeholder="Name"
+               Keyboard="Chat"
+               TextChanged="EntryCtrltxt_TextChanged"
+               Completed="EntryCtrltxt_Completed"/>
+
+        <!--<Entry x:Name="EntryCtrltxt2"
+               Placeholder="Numeric"
+               Keyboard="Numeric"
+               TextChanged="EntryCtrltxt_TextChanged"
+               Completed="EntryCtrltxt_Completed"/>
+
+        <Entry x:Name="EntryCtrltxt3"
+               Placeholder="Telephone"
+               Keyboard="Url"
+               TextChanged="EntryCtrltxt_TextChanged"
+               Completed="EntryCtrltxt_Completed"/>
+
+        <Entry x:Name="EntryCtrltxt4"
+               Placeholder="Url"
+               Keyboard="Url"
+               TextChanged="EntryCtrltxt_TextChanged"
+               Completed="EntryCtrltxt_Completed"/>-->
+
+        <Editor x:Name="editorControlTxt"
+                AutoSize="TextChanges"/>
+        
+                <!-- The editor can allow users to write longer text, and the Autosize property dictates 
+                whether to autosize the editor or not. In this case, the editor will expand or contract 
+                automatically as the text the user types requires it -->
+        
+    </VerticalStackLayout>
+</ContentPage>

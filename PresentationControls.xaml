@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControls.PresentationControls"
+             Title="PresentationControls">
+    <ScrollView>
+    <StackLayout>
+        <!-- The BoxView Control can be used to separate stuff on the screen, giving backgrounds to each section-->
+        
+        <BoxView Color="Firebrick"
+                 HeightRequest="120"/>
+
+        <!-- The Label Control is used to display text-->
+        <Label 
+            Text="This is a Label Control!"
+            TextColor="Black"
+            FontAttributes="Bold"
+            FontSize="Medium"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <!-- The Ellipse Control is used to draw geometric shapes on the UI. This one draws an ellipse. It can be used for user profile (pictures) or to represent data desired in an ellipse-->
+        <Ellipse Fill="Firebrick"
+                 Stroke="cadetblue"
+                 StrokeThickness="6"
+                 HeightRequest="230"
+                 HorizontalOptions="Center"
+                 WidthRequest="230"/>
+
+        <Line Stroke="cadetblue"
+              X1="10"
+              Y1="1"
+              X2="200"
+              Y2="100"
+              StrokeThickness="8"
+              HorizontalOptions="Center"/>
+
+        <Rectangle Fill="firebrick"
+                   Stroke="cadetblue"
+                   StrokeThickness="6"
+                   HeightRequest="50"
+                   WidthRequest="190"
+                   HorizontalOptions="Center" 
+                   RadiusX="60"
+                   RadiusY="6"/>
+
+        <Polygon Fill="cadetblue"
+                 Stroke="firebrick"
+                 StrokeThickness="6"
+                 Points="50,10 90,80 10,80"
+                 HorizontalOptions="Center"/>
+
+        <Polygon Fill="firebrick"
+                 Stroke="cadetblue"
+                 HorizontalOptions="Center"
+                 StrokeThickness="6"
+                 StrokeDashArray="1,1"
+                 StrokeDashOffset="6"
+                 Points="50,10 90,80 10,80"/>
+
+        <Polyline Points="0,0 10,60, 15,20 80,5 80,50"
+                  Stroke="firebrick"
+                  HorizontalOptions="Center"/>
+
+        <Polyline Fill="cadetblue"
+                  Stroke="firebrick"
+                  StrokeThickness="2"
+                  HorizontalOptions="Center"
+                  Points="0,16 45,30 80,10 80,10 30,16 45,30 90,10 40,10"/>
+
+
+        <Path Aspect="Uniform"
+              HorizontalOptions="Center"
+              Stroke="cadetblue"
+              StrokeThickness="6"
+              Data="M 10,100 L 100,100 100,50Z"/>
+
+              <Border Stroke="firebrick"
+                      StrokeThickness="3"
+                      Background="cadetblue"
+                      Padding="15,10"
+                      HorizontalOptions="Center">
+                      <Border.StrokeShape>
+                          <RoundRectangle CornerRadius="40,0,0,40"/>
+                      </Border.StrokeShape>
+
+              <Label Text="Label Control enclosed in Border Control"
+                     FontAttributes="Bold"
+                     FontSize="Medium"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"/>
+              </Border>
+
+            <Frame BackgroundColor="Aquamarine"
+                   Margin="7"
+                   Padding="18">
+                
+                   <Image Source="dotnet_bot.svg"/>
+            </Frame>
+
+            <WebView HeightRequest="500"
+                     Source="https://academia.elcamino.dev"/>
+        
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

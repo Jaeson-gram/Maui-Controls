@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControls.EventsControls"
+             Title="EventsControls"
+             x:Name="pageBackground">
+    
+    <!-- These Controls allow us to initiate events-->
+    <StackLayout>
+
+        <Button x:Name="testButton1" 
+                Text="Click Me"
+                Clicked="testButton1_Clicked"/>
+
+        <ImageButton Source="dotnet_bot.svg"
+                     Clicked="ImageButton_Clicked"/>
+
+        <Label Text="Blueish"
+               FontAttributes="Bold"
+               FontSize="Subtitle"/>
+        
+        <RadioButton x:Name="radioButton1" 
+                     Content="Blue"
+                     CheckedChanged="RadioButton_CheckedChanged_1"/>
+
+        <RadioButton x:Name="radioButton2"
+                     Content="Aquamarine"
+                     CheckedChanged="RadioButton_CheckedChanged_2"/>
+        
+        <RadioButton Content="AliceBlue"
+                     CheckedChanged="RadioButton_CheckedChanged_21"/>
+
+        <Label Text="Redish"
+               FontAttributes="Bold"
+               FontSize="Subtitle"/>
+
+        <RadioButton x:Name="radioButton3"
+                     Content="FireBrick"
+                     CheckedChanged="RadioButton_CheckedChanged_3"/>
+
+        <RadioButton x:Name="radioButton4"
+                     Content="Orange"
+                     CheckedChanged="RadioButton_CheckedChanged_4"/>
+
+        <RadioButton Content="PeachPuff"
+                     CheckedChanged="RadioButton_CheckedChanged_5"/>
+
+        <SearchBar x:Name="searchBar"
+                   SearchButtonPressed="searchBar_SearchButtonPressed"/>
+
+        <SwipeView>
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem
+                        BackgroundColor="MediumAquamarine"
+                        Text="Star"
+                        Invoked="SwipeItem_Invoked"/>
+
+                    <SwipeItem
+                        BackgroundColor="LightCoral"
+                        Text="Delete"
+                        Invoked="SwipeItem_Invoked_1"/>
+                </SwipeItems>
+            </SwipeView.LeftItems>
+
+            <Grid BackgroundColor="Gray"
+                  HeightRequest="60"
+                  WidthRequest="300">
+
+                <Label Text="Swipe Right >>>"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"/>
+            </Grid>
+        </SwipeView>
+
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControls.ActivityIndicatorControl"
+             Title="ActivityIndicatorControl">
+    <VerticalStackLayout>
+        <ActivityIndicator x:Name="activityInd"
+                           IsRunning="True"
+                           Color="Firebrick"/>
+
+        <ActivityIndicator x:Name="activityInd2"
+                           IsRunning="False"
+                           Color="Firebrick"/>
+
+        <ProgressBar x:Name="prgBar"
+                     Progress=".6"
+                     ProgressColor="Firebrick"/>
+        
+        <!-- The progressBar should be used when the number of contents you're trying to load is known
+        And the ActivityIndicator when the number of contents is unknown-->
+    </VerticalStackLayout>
+</ContentPage>
